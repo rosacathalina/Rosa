@@ -8,26 +8,27 @@
 
 void clearScreen() {
     // Cross-platform clear screen
+	// Membersihkan layar lintas platform
     #ifdef _WIN32
-    system("cls");
+    system("cls");	// Membersihkan layar pada Windows
     #else
-    system("clear");
+    system("clear");	// Membersihkan layar pada sistem operasi lain
     #endif
 }
 
 struct Barang {
-    char no[3];
-    char nama[20];
-    int harga;
+    char no[3];	// Nomor identifikasi barang
+    char nama[20];	// Nama barang
+    int harga;	// Harga barang
 };
 
 struct Pembelian {
-    char no[3];
-    int jumlah;
+    char no[3];	// Nomor identifikasi barang yang dibeli
+    int jumlah;	// Jumlah barang yang dibeli
 };
 
 void intToString(int value, char* result) {
-    sprintf(result, "%d", value);
+    sprintf(result, "%d", value);	// Mengkonversi integer ke string
 }
 
 void tampilkanMenu(struct Barang items[], int maxItems) {
